@@ -3,13 +3,16 @@ package TestPack;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class NaukriAutomate {
+import utils.util;
+
+public class NaukriAutomate  extends util{
 
 	WebDriver driver;
 	
@@ -17,7 +20,7 @@ public class NaukriAutomate {
 	@BeforeTest
 	public void BeforeMethod() {
 		System.setProperty("webdriver.chrome.driver",
-			    "C:\\Users\\HP\\git\\DMS-ERP-TESTING\\DinshawsTesting\\Drivers\\chromedriver-win64\\chromedriver.exe");
+			    "C:\\Users\\HP\\git\\Naukri\\Demo_For_Naukri\\drivers\\chromedriver.exe");
 				ChromeOptions options = new ChromeOptions();
 				WebDriver driver = new ChromeDriver(options);
 				driver.get("https://www.naukri.com/nlogin/login?URL=https://www.naukri.com/mnjuser/homepage");
@@ -32,6 +35,7 @@ public class NaukriAutomate {
 				
 				Thread.sleep(500);
 				driver.findElement(By.xpath("//input[@id='usernameField']")).sendKeys("vaishubgawande@gmail.com");
+				
 				driver.findElement(By.xpath("//input[@id='passwordField']")).sendKeys("Vaishnavi@123");
 				Thread.sleep(500);
 				driver.findElement(By.xpath("(//button[@type='submit'])[1]")).click();
@@ -56,7 +60,7 @@ public class NaukriAutomate {
 	
 				@AfterTest
 				public void TearDown() {
-					driver.quit();
+					driver.close();
 					
 				}
 				
