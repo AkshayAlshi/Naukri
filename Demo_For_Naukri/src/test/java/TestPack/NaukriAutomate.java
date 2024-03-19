@@ -22,7 +22,7 @@ public class NaukriAutomate  extends util{
 		System.setProperty("webdriver.chrome.driver",
 			    "C:\\Users\\HP\\git\\Naukri\\Demo_For_Naukri\\drivers\\chromedriver.exe");
 				ChromeOptions options = new ChromeOptions();
-				WebDriver driver = new ChromeDriver(options);
+				 driver = new ChromeDriver(options);
 				driver.get("https://www.naukri.com/nlogin/login?URL=https://www.naukri.com/mnjuser/homepage");
 				driver.manage().window().maximize();
 	}
@@ -40,7 +40,7 @@ public class NaukriAutomate  extends util{
 				Thread.sleep(500);
 				driver.findElement(By.xpath("(//button[@type='submit'])[1]")).click();
 				
-				Thread.sleep(2000);
+				Thread.sleep(5000);
 				driver.findElement(By.xpath("//a[text()='View' and text()=' profile']")).click();
 				Thread.sleep(500);
 				JavascriptExecutor js = ((JavascriptExecutor)driver);
