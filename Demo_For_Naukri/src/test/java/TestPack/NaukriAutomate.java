@@ -3,7 +3,7 @@ package TestPack;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
@@ -20,7 +20,7 @@ public class NaukriAutomate  extends util{
 	@BeforeTest
 	public void BeforeMethod() {
 		System.setProperty("webdriver.chrome.driver",
-			    "C:\\Users\\HP\\git\\Naukri\\Demo_For_Naukri\\drivers\\chromedriver.exe");
+			    "C:\\Users\\HP\\git\\Naukri\\Demo_For_Naukri\\drivers\\chromedriver-win64\\chromedriver.exe");
 				ChromeOptions options = new ChromeOptions();
 				 driver = new ChromeDriver(options);
 				driver.get("https://www.naukri.com/nlogin/login?URL=https://www.naukri.com/mnjuser/homepage");
