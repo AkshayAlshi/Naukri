@@ -25,6 +25,7 @@ public class NaukriAutomate  extends util{
 				 driver = new ChromeDriver(options);
 				driver.get("https://www.naukri.com/nlogin/login?URL=https://www.naukri.com/mnjuser/homepage");
 				driver.manage().window().maximize();
+				
 	}
 	
 	
@@ -55,6 +56,7 @@ public class NaukriAutomate  extends util{
 				driver.findElement(By.xpath("//div[@class='nI-gNb-bar2']")).click();
 				Thread.sleep(1000);
 				driver.findElement(By.xpath("//a[text()='Logout']")).click();
+				Thread.sleep(1000);
 				
 	}
 	
